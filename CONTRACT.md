@@ -76,7 +76,7 @@ devid=FW-TEACHING-01 eventtime=1672531200000000000 logid=0000000013 type=traffic
 | 3 | logid | 0000000013 | Vendor-documented (log ID 13 = Traffic/forward session-end) |
 | 4 | type | traffic | Vendor-documented |
 | 5 | subtype | forward | Vendor-documented (forwarded-traffic subtype) |
-| 6 | action | close | Vendor-documented (under Traffic/forward session-end semantics, describes allowed session that ended normally) |
+| 6 | action | close | Vendor-documented allowed-session end status under Traffic/forward; no TCP shutdown sequence is inferred |
 | 7 | proto | 6 | Vendor-documented field; standards-derived value (IANA protocol 6=TCP) |
 | 8 | srcip | 192.0.2.10 | Standards-derived synthetic (RFC 5737 TEST-NET-1) |
 | 9 | dstip | 198.51.100.20 | Standards-derived synthetic (RFC 5737 TEST-NET-2) |
@@ -102,9 +102,9 @@ uses nanoseconds per the most specific source.
 - Build-specific variations
 
 **action semantics:** subtype=forward identifies Fortinet's forwarded-traffic
-subtype. Under applicable Traffic/forward session-end semantics, action=close
-describes an allowed session that ended normally. action=close is session-end
-status, not policy decision alone.
+subtype. Under applicable Traffic/forward session-end semantics, action=close is
+an allowed-session end status. This teaching contract does not infer a particular
+TCP shutdown sequence from it; it is not policy decision alone.
 
 ## Teaching Simplifications
 

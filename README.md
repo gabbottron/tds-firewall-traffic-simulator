@@ -59,6 +59,11 @@ article evidence.
 teaching experiment only. Does not establish platform-wide transport, framing,
 or event model.
 
+**Series checkpoint:** This repository supports the published Article 2
+installment. Its immutable Article 2 checkpoint is identified by the
+`article-02` tag at
+https://github.com/gabbottron/tds-firewall-traffic-simulator/tree/article-02.
+
 **Evidence rules:**
 
 - Keep vendor documentation, synthetic teaching contract, implemented behavior,
